@@ -2,8 +2,8 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'content', { preload: preload, create: create, update: update, render: render, jump: jump });
 
 function preload() {
-	game.load.image('background','assets/background.png');
-	game.load.spritesheet('dog','assets/dog_xs_spritesheet.png',206,200,12);
+	game.load.image('background','assets/full-river-game-board.png');
+	game.load.spritesheet('trevor','assets/2xtrevor-trout.png',206,200,12);
 }
 
 var player;
@@ -15,7 +15,7 @@ function create() {
 	game.world.setBounds(0, 0, 1280, 400);
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 
-	player = game.add.sprite(game.world.centerX, 400, 'dog');
+	player = game.add.sprite(game.world.centerX, 400, 'trevor');
     player.animations.add('look-left',[3,2],6,false);
     player.animations.add('look-up-left',[0],6,false);
     player.animations.add('look-down-left',[1],6,false);
