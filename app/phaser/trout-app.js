@@ -15,6 +15,8 @@ var mainState = {
 		// Load image
 		game.load.image('river', '../../assets/full-river-game-board.png');
 		game.load.image('big-treasure', '../../assets/10xtreasure_chest.png');
+		game.load.image('treasure', '../../assets/2xtreasure_chest.png');
+		game.load.image('enemy', '../../assets/cake-monster-animated.gif');
 		game.load.image('player', '../../assets/2xtrevor-traut.png');
 		game.load.image('whirlpool', '../../assets/2xwhirlpool.png');
 	},
@@ -26,14 +28,19 @@ var mainState = {
 		// Display the image on the screen
 		// this.sprite = game.add.sprite(350, 200, 'whirlpool');
 		// game.add.sprite(positionX, positionY, imageName);
-		game.add.sprite(x_center-320/2, y_center-320/2, 'big-treasure');
+		// game.add.sprite(x_center-320/2, y_center-320/2, 'big-treasure');
+		this.board = game.add.sprite(x_center-316/2, y_center-411/2+50, 'river');
+		this.player = game.add.sprite(x_center+32*2, height-32*2,'player');
+		this.enemy = game.add.sprite(32*6, 0,'enemy');
+
+		game.add.sprite(32*4,0,'treasure');
 	},
 	update: function() {
 		// This function is called 60 times per second
 		// It contains the game's logic
 
 		// // Increment the angle of the sprite by 1, 60 times per seconds
-		// this.sprite.angle += 3;
+		// this.player.angle += 3;
 	}
 };
 // We initialising Phaser
