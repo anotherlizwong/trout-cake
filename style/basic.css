@@ -16,3 +16,8 @@ header {
 	height: 54px;
 	width: 468px;
 }
+h1 {
+	font-family: 'Courier New';
+	white-space: pre;
+	font-size: .2em;
+}
