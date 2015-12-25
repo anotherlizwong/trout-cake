@@ -18,7 +18,7 @@ var mainState = {
 		game.load.image('treasure', '../../assets/2xtreasure_chest.png');
 		game.load.image('enemy', '../../assets/cake-monster-animated.gif');
 		game.load.image('player', '../../assets/2xtrevor-traut.png');
-		game.load.image('whirlpool', '../../assets/2xwhirlpool.png');
+		game.load.image('spawn', '../../assets/whirlpool_sm_bg.png');
 	},
 	create: function() {
 		// This function is called after the preload function
@@ -26,13 +26,12 @@ var mainState = {
 		game.physics.startSystem(Phaser.Physics.ARCADE);
 
 		// Display the image on the screen
-		// this.sprite = game.add.sprite(350, 200, 'whirlpool');
 		// game.add.sprite(positionX, positionY, imageName);
 		// game.add.sprite(x_center-320/2, y_center-320/2, 'big-treasure');
 		this.board = game.add.sprite(x_center-316/2, y_center-411/2+50, 'river');
 		this.player = game.add.sprite(x_center+32*2, height-32*2,'player');
 		this.enemy = game.add.sprite(32*6, 0,'enemy');
-
+		game.add.sprite(x_center+32*2, height-32*4, 'spawn');
 		game.add.sprite(32*4,0,'treasure');
 	},
 	update: function() {
