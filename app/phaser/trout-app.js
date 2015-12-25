@@ -19,6 +19,10 @@ var mainState = {
 		game.load.image('enemy', '../../assets/cake-monster-animated.gif');
 		game.load.image('player', '../../assets/2xtrevor-traut.png');
 		game.load.image('spawn', '../../assets/whirlpool_sm_bg.png');
+
+		// tileset
+		game.load.image('game_board', '../../assets/editable/2xgame_map.png');
+		game.load.tilemap('map', '../../assets/editable/2xgame_map.json', null, Phaser.Tilemap.TILED_JSON);
 	},
 	create: function() {
 		// This function is called after the preload function
@@ -28,11 +32,21 @@ var mainState = {
 		// Display the image on the screen
 		// game.add.sprite(positionX, positionY, imageName);
 		// game.add.sprite(x_center-320/2, y_center-320/2, 'big-treasure');
-		this.board = game.add.sprite(x_center-316/2, y_center-411/2+50, 'river');
+		// this.board = game.add.sprite(x_center-316/2, y_center-411/2+50, 'river');
 		this.player = game.add.sprite(x_center+32*2, height-32*2,'player');
 		this.enemy = game.add.sprite(32*6, 0,'enemy');
 		game.add.sprite(x_center+32*2, height-32*4, 'spawn');
 		game.add.sprite(32*4,0,'treasure');
+
+		// Create the tilemap
+		this.map = game.add.tilemap('map');
+		// Add the tileset to the map
+		this.map.addTilesetImage('game_board');
+		// Create the layer, by specifying the name of the Tiled
+		this.layer = this.map.createLayer('river-border-layer');
+
+		// Enable collisions for the first element of our tileset (the blue wall)
+		this.map.setCollision(1);
 	},
 	update: function() {
 		// This function is called 60 times per second
