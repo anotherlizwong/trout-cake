@@ -36,7 +36,7 @@ var mainState = {
 		this.player = game.add.sprite(x_center+32*2, height-32*2,'player');
 		this.enemy = game.add.sprite(32*6, 0,'enemy');
 		game.add.sprite(x_center+32*2, height-32*4, 'spawn');
-		game.add.sprite(32*4,0,'treasure');
+		game.add.sprite(32*4, 0, 'treasure');
 
 		// Create the tilemap
 		this.map = game.add.tilemap('map');
@@ -52,7 +52,7 @@ var mainState = {
 		// This function is called 60 times per second
 		// It contains the game's logic
 
-		// // Increment the angle of the sprite by 1, 60 times per seconds
+		// Increment the angle of the sprite by 1, 60 times per seconds
 		// this.player.angle += 3;
 	}
 };
