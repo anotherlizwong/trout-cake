@@ -21,8 +21,8 @@ var mainState = {
 		game.load.image('spawn', '../../assets/whirlpool_sm_bg.png');
 
 		// tileset
-		game.load.image('game_board', '../../assets/editable/2xgame_map.png');
-		game.load.tilemap('map', '../../assets/editable/2xgame_map.json', null, Phaser.Tilemap.TILED_JSON);
+		game.load.image('game_board', '../../assets/editable/game_map.png');
+		game.load.tilemap('map', '../../assets/editable/game_map.json', null, Phaser.Tilemap.TILED_JSON);
 	},
 	create: function() {
 		// This function is called after the preload function
