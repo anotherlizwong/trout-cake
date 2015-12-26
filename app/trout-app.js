@@ -13,12 +13,12 @@ var mainState = {
 		game.stage.backgroundColor = '#ffffff';
 
 		// Load image
-		game.load.image('river', '../../assets/full-river-game-board.png');
-		game.load.image('big-treasure', '../../assets/10xtreasure_chest.png');
-		game.load.image('treasure', '../../assets/2xtreasure_chest.png');
-		game.load.image('enemy', '../../assets/cake-monster-animated.gif');
-		game.load.image('player', '../../assets/2xtrevor-traut.png');
-		game.load.image('spawn', '../../assets/whirlpool_sm_bg.png');
+		game.load.image('river', '../assets/full-river-game-board.png');
+		game.load.image('big-treasure', '../assets/10xtreasure_chest.png');
+		game.load.image('treasure', '../assets/2xtreasure_chest.png');
+		game.load.image('enemy', '../assets/cake-monster-animated.gif');
+		game.load.image('player', '../assets/2xtrevor-traut.png');
+		game.load.image('spawn', '../assets/whirlpool_sm_bg.png');
 	},
 	create: function() {
 		// This function is called after the preload function
